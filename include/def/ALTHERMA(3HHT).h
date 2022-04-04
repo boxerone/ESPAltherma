@@ -2,6 +2,8 @@
 //  This file is a definition file for the ESPAtherma.
 //  uncomment each value you want to query for your installation.
 
+//copia di ALTHERMA(HPSU6_ULTRA).h
+
 LabelDef PROGMEM labelDefs[] = {
 //{0x00,0,801,0,-1,"*Refrigerant type"},
 //{0x00,0,152,1,-1,"Sensor Data Qty"},
@@ -49,20 +51,22 @@ LabelDef PROGMEM labelDefs[] = {
 //{0x11,4,215,1,-1,"O/U EEPROM (10th digit)"},
 //{0x11,5,214,1,-1,"O/U EEPROM (11th digit)"},
 //{0x00,0,995,1,-1,"NextDataGrid"},
-{0x20,0,105,2,1,"Outdoor air temp."},
+//{0x20,0,105,2,1,"Outdoor air temp."},
+{0x20,0,105,2,1,"Outdoor air temp.(R1T)"},  //corretto rispetto a ALTHERMA(LT_11-16KW)
 {0x20,2,105,2,1,"O/U Heat Exch. Temp."},
 {0x20,4,105,2,1,"Discharge pipe temp."},
 {0x20,6,105,2,1,"Suction pipe temp."},
-//{0x20,8,105,2,1,"O/U Heat Exch. Mid-temp."},
+{0x20,8,105,2,1,"O/U Heat Exch. Mid-temp."},
 {0x20,10,105,2,1,"Liquid pipe temp."},
-//{0x20,12,105,2,1,"INV fin temp."},
+{0x20,12,105,2,1,"INV fin temp."},
 {0x20,14,105,2,2,"Pressure"},
 //{0x20,14,405,2,1,"Pressure(T)"},
 //{0x20,16,105,2,-1,"Not in use"},
 //{0x20,18,105,2,-1,"Not in use"},
 {0x21,0,105,2,-1,"INV primary current (A)"},
 {0x21,2,105,2,-1,"INV secondary current (A)"},
-{0x21,4,101,2,-1,"Voltage (V)"},
+//{0x21,4,101,2,-1,"Voltage (V)"},
+{0x21,4,101,2,-1,"Voltage (N-phase) (V)"},  //copiato e corretto da ALTHERMA(LT_11-16KW)
 //{0x21,6,307,1,-1,"Brine Flow Switch"},
 //{0x21,6,306,1,-1,"Not in use"},
 //{0x21,6,305,1,-1,"Not in use"},
@@ -121,7 +125,7 @@ LabelDef PROGMEM labelDefs[] = {
 //{0x60,11,303,1,-1,"Solar input"},
 //{0x60,11,302,1,-1,"Not in use"},
 //{0x60,11,301,1,-1,"Not in use"},
-//{0x60,11,300,1,-1,"Bivalent Operation"},
+{0x60,11,300,1,-1,"Bivalent Operation"},
 //{0x60,12,307,1,-1,"2way valve(On:Heat_Off:Cool)"},
 //{0x60,12,306,1,-1,"3way valve(On:DHW_Off:Space)"},
 //{0x60,12,305,1,-1,"BSH"},
@@ -172,11 +176,12 @@ LabelDef PROGMEM labelDefs[] = {
 {0x62,8,301,1,-1,"Alarm output"},
 //{0x62,8,300,1,-1,"Space C/H Op. or BPH"},
 {0x62,9,105,2,-1,"Flow sensor (l/min)"},
-{0x62,11,105,1,2,"Water pressure"},
+//{0x62,11,105,1,2,"Water pressure"},
 {0x62,12,152,1,-1,"Water pump signal (0:max-100:stop)"},
 //{0x62,13,152,1,-1,"[Future] 3 way Valve Mixing 1"},
 //{0x62,14,152,1,-1,"[Future] 3 way Valve Mixing 2"},
-{0x62,15,105,2,2,"Pressure sensor"},
+//{0x62,15,105,2,2,"Pressure sensor"},
+{0x62,15,152,2,2,"Refrigerant pressure sensor"}, //aggiunto da ALTHERMA(LT_11-16KW)
 //{0x62,17,307,1,-1,"Not in use"},
 //{0x62,17,306,1,-1,"Not in use"},
 //{0x62,17,305,1,-1,"Not in use"},
@@ -207,6 +212,6 @@ LabelDef PROGMEM labelDefs[] = {
 //{0x64,9,301,1,-1,"Main pump"},
 //{0x64,10,105,2,1,"Mixed water temp."},
 //{0x64,12,105,2,1,"2nd Domestic hot water temperature"},
-//{0x64,14,152,1,1,"Target delta T heating"},
-//{0x64,15,152,1,1,"Target delta T cooling"},
+{0x64,14,152,1,1,"Target delta T heating"},
+{0x64,15,152,1,1,"Target delta T cooling"},
 };

@@ -50,6 +50,7 @@
 //
 //Suported locales: French, German, Spanish.
 
+#include "def/ALTHERMA(3HHT).h"
 //#include "def/ALTHERMA(BIZONE_CB_04-08KW).h"
 //#include "def/ALTHERMA(BIZONE_CB_11-16KW).h"
 //#include "def/ALTHERMA(GSHP).h"
@@ -57,7 +58,7 @@
 //#include "def/ALTHERMA(HPSU6_ULTRA).h"
 //#include "def/ALTHERMA(HYBRID).h"
 //#include "def/ALTHERMA(LT-D7_E_BML).h"
-#include "def/ALTHERMA(LT_11-16KW_HYDROSPLIT_HYDRO_UNIT).h"
+//#include "def/ALTHERMA(LT_11-16KW_HYDROSPLIT_HYDRO_UNIT).h"  
 //#include "def/ALTHERMA(LT_CA_CB_04-08KW).h"
 //#include "def/ALTHERMA(LT_CA_CB_11-16KW).h"
 //#include "def/ALTHERMA(LT_DA_04-08KW).h"
